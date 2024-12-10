@@ -9,16 +9,20 @@
 #include "digital_watch.h"
 
 /*
- *  16x2 LCD screen is used in this project
- *	liquidcrystal_i2c library files are taken from the following link
- *	https://github.com/eziya/STM32_HAL_I2C_HD44780/blob/master/Src/
- *	Simply add liquidcrystal_i2c.h and liquidcrystal_i2c.c files to your
- * 		projects Core/Src/ and Core/Inc/ folders
- *  In liquidcrystal_i2c.h file:
- *		Change line 4 to 	#include “stm32f1xx_hal.h”
- *		Change line 58 to 	#define DEVICE_ADDR (0x27 << 1)
- *	For more details on this library:
- *	https://microcontrollerslab.com/i2c-lcd-stm32-blue-pill-stm32cubeide/
+ * This project uses a 16x2 LCD screen with an I2C interface.
+ *
+ * LiquidCrystal_I2C library files are sourced from:
+ * https://github.com/eziya/STM32_HAL_I2C_HD44780/blob/master/Src/
+ *
+ * To include the library:
+ * 1. Add `liquidcrystal_i2c.h` and `liquidcrystal_i2c.c` files to your
+ *    project's Core/Inc/ and Core/Src/ folders.
+ * 2. Modify `liquidcrystal_i2c.h` as follows:
+ *    - Line 4: Change to `#include "stm32f1xx_hal.h"`
+ *    - Line 58: Update `#define DEVICE_ADDR` to `(0x27 << 1)` (for your LCD).
+ *
+ * For more details about the library and its usage:
+ * https://microcontrollerslab.com/i2c-lcd-stm32-blue-pill-stm32cubeide/
  */
 #include "liquidcrystal_i2c.h"
 
